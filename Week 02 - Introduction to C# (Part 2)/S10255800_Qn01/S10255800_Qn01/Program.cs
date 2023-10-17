@@ -4,9 +4,6 @@
 
 /* Part A */
 #region Part A
-
-using System.Collections;
-
 Console.WriteLine("===== Part A =====");
 
 var arr = new int[5];
@@ -69,10 +66,7 @@ while (true)
 
 // Display contents of list
 Console.Write("Contents of list: ");
-foreach (var i in list)
-{
-    Console.Write(i + " ");
-}
+Console.Write(string.Join(" ", list));
 
 Console.WriteLine("\n==================");
 #endregion
@@ -88,10 +82,7 @@ stack.Push(72);
 
 // Pop stack & Display contents
 Console.Write("The stack contains: ");
-while (stack.Count > 0)
-{
-    Console.Write(stack.Pop() + " ");
-}
+Console.Write(string.Join(" ", stack));
 
 Console.WriteLine("\n==================");
 #endregion
@@ -108,19 +99,13 @@ queue.Enqueue(45);
 
 // Display the contents of the enqueued queue
 Console.Write("Content of queue after enqueuing: ");
-foreach (var i in queue)
-{
-    Console.Write(i + " ");
-}
+Console.WriteLine(string.Join(", ", queue));
 
 // Dequeue the queue & display
 queue.Dequeue();
 
-Console.Write("\nContent of queue after dequeuing: ");
-foreach (var i in queue)
-{
-    Console.Write(i + " ");
-}
+Console.Write("Content of queue after dequeuing: ");
+Console.WriteLine(string.Join(", ", queue));
 
 Console.WriteLine("\n==================");
 #endregion
