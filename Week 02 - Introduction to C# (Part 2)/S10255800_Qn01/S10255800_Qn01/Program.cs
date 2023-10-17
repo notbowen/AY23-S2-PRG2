@@ -27,10 +27,7 @@ for (var i = 0; i < 5; i++)
 
 // Display values in `arr`
 Console.Write("Values in arr: ");
-foreach (var i in arr)
-{
-    Console.Write(i + " ");
-}
+Console.Write(string.Join(", ", arr));
 
 Console.WriteLine("\n==================");
 #endregion
@@ -66,7 +63,7 @@ while (true)
 
 // Display contents of list
 Console.Write("Contents of list: ");
-Console.Write(string.Join(" ", list));
+Console.Write(string.Join(", ", list));
 
 Console.WriteLine("\n==================");
 #endregion
@@ -82,7 +79,7 @@ stack.Push(72);
 
 // Pop stack & Display contents
 Console.Write("The stack contains: ");
-Console.Write(string.Join(" ", stack));
+Console.Write(string.Join(", ", stack));
 
 Console.WriteLine("\n==================");
 #endregion
