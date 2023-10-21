@@ -86,13 +86,13 @@ var alighting = GetStop("Enter alighting bus stop: ", busDistance);
 var distance = busDistance[alighting] - busDistance[boarding];
 
 // Calculate fare based on distance
-double fare = 2.01; // Set default to 201 as that is the case the for loop does not cover
-for (var i = 1; i < distanceFare.Count; i++)
+var fare = 2.01; // Set default to 201 as that is the case the for loop does not cover
+foreach (var row in distanceFare)
 {
-    var dist = Convert.ToDouble(distanceFare[i][0]);
-    if (dist > distance)
+    var dist = Convert.ToDouble(row[0]);
+    if (dist >= distance)
     {
-        fare = Convert.ToDouble(distanceFare[i-1][1]) / 100;
+        fare = Convert.ToDouble(row[1]) / 100;
         break;
     }
 }
