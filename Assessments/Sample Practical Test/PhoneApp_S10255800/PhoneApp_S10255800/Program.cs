@@ -29,31 +29,40 @@ void DisplayOutput()
     Console.WriteLine("{0, -10} {1, -10} {2, -10} {3}", "PhoneNo", "Usage", "PlanType", "PhoneCharge($)");
     foreach (Phone phone in phones)
     {
-        Console.WriteLine("{0, -10} {1, -10} {2, -10} {3,14:0.00}", phone.PhoneNum, phone.Usage, phone.PlanType, Math.Round(phone.CalculateCharge(), 2));
+        Console.WriteLine("{0, -10} {1, -10} {2, -10} {3,14:0.00}", phone.PhoneNum, phone.Usage, phone.PlanType,
+            Math.Round(phone.CalculateCharge(), 2));
     }
 }
 
 DisplayOutput();
 
 // Part D
-Console.WriteLine("\nUpdate Phone Usage");
-Console.WriteLine("----------------");
-
-Console.Write("Enter phone no: ");
-string phoneNumber = Console.ReadLine();
-
-Phone? searchedNumber = phones.FirstOrDefault(phone => phone.PhoneNum == phoneNumber);
-
-if (searchedNumber == null)
+void UpdateUsage()
 {
-    Console.WriteLine("Phone not found!");
-    return;
+    Console.WriteLine("\nUpdate Phone Usage");
+    Console.WriteLine("----------------");
+
+    Console.Write("Enter phone no: ");
+    string phoneNumber = Console.ReadLine();
+
+    Phone? searchedNumber = phones.FirstOrDefault(phone => phone.PhoneNum == phoneNumber);
+
+    if (searchedNumber == null)
+    {
+        Console.WriteLine("Phone not found!\n");
+        return;
+    }
+
+    Console.WriteLine("Current Usage: " + searchedNumber.Usage);
+    Console.Write("Enter new usage: ");
+
+    searchedNumber.Usage = int.Parse(Console.ReadLine());
+    Console.WriteLine("The new usage is updated successfully\n");
 }
 
-Console.WriteLine("Current Usage: " + searchedNumber.Usage);
-Console.Write("Enter new usage: ");
-
-searchedNumber.Usage = int.Parse(Console.ReadLine());
-Console.WriteLine("The new usage is updated successfully\n");
-
-DisplayOutput();
+// Part D + E
+while (true)
+{
+    UpdateUsage();
+    DisplayOutput();
+}
