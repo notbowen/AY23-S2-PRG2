@@ -29,8 +29,7 @@ void DisplayOutput()
     Console.WriteLine("{0, -10} {1, -10} {2, -10} {3}", "PhoneNo", "Usage", "PlanType", "PhoneCharge($)");
     foreach (Phone phone in phones)
     {
-        Console.WriteLine("{0, -10} {1, -10} {2, -10} {3,14:0.00}", phone.PhoneNum, phone.Usage, phone.PlanType,
-            Math.Round(phone.CalculateCharge(), 2));
+        Console.WriteLine("{0} {1,14:0.00}", phone, Math.Round(phone.CalculateCharge(), 2));
     }
 }
 

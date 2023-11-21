@@ -8,7 +8,6 @@ public class Phone
 
     public Phone()
     {
-        
     }
 
     public Phone(string phoneNum, int usage, string planType)
@@ -41,6 +40,6 @@ public class Phone
 
     public override string ToString()
     {
-        return base.ToString();
+        return $"{PhoneNum,-10} {Usage,-10} {PlanType,-10}";
     }
 }
