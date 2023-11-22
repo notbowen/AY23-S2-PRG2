@@ -21,11 +21,11 @@ public class Cylinder : Circle
 
     public double CalculateVolume()
     {
-        return base.CalculateArea() * Length;
+        return CalculateArea() * Length;
     }
 
     public override string ToString()
     {
-        return base.ToString();
+        return $"Radius: {Radius}\nLength: {Length}\nArea: {CalculateArea():0.00}\nVolume: {CalculateVolume():0.00}";
     }
 }

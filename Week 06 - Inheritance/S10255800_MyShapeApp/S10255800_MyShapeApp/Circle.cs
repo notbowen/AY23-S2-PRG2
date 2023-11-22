@@ -21,6 +21,6 @@ public class Circle
 
     public override string ToString()
     {
-        return base.ToString();
+        return $"Radius: {Radius}\nArea: {CalculateArea():0.00}";
     }
 }
