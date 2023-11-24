@@ -2,7 +2,6 @@
 // Written by: Hu Bowen
 // Date: 21 Nov 2023
 
-using System.Xml;
 using S10255800_MyBankApp;
 
 // Question 3a)
