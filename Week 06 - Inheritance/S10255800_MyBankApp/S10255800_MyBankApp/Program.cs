@@ -45,11 +45,7 @@ while (true)
     switch (input)
     {
         case 1: // Option 1: Display all Accounts
-            foreach (SavingsAccount savingsAccount in savingsAccCollection)
-            {
-                Console.WriteLine(savingsAccount);
-            }
-
+            DisplayAll(savingsAccCollection);
             break;
 
         case 2: // Option 2: Deposit
@@ -117,8 +113,17 @@ while (true)
     Console.WriteLine();
 }
 
-// Option 2 Helper Function
+// Option 2 Helper Function 1
+void DisplayAll(List<SavingsAccount> sCollection)
+{
+    foreach (SavingsAccount savingsAccount in sCollection)
+    {
+        Console.WriteLine(savingsAccount);
+    }
+}
+
+// Option 2 Helper Function 2
 SavingsAccount? Search(List<SavingsAccount> savingsAccounts, string accNo)
 {
-    return savingsAccCollection.FirstOrDefault(acc => acc.AccNo == accNo);
+    return savingsAccounts.FirstOrDefault(acc => acc.AccNo == accNo);
 }
