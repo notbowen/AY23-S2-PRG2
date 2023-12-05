@@ -1,0 +1,10 @@
+#,Name,Type,Power,HP,Attack,Defense
+1,Bulbasaur,Grass,31,45,49,49
+2,Ivysaur,Grass,40,60,62,63
+3,Venusaur,Grass,52,80,82,83
+4,Charmander,Fire,30,39,52,43
+5,Charmeleon,Fire,40,58,64,58
+6,Charizard,Fire,53,78,84,78
+7,Squirtle,Water,31,44,48,65
+8,Wartortle,Water,40,59,63,80
+9,Blastoise,Water,53,79,83,100
